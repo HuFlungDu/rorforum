@@ -1,4 +1,4 @@
-Rortesting::Application.routes.draw do
+Rorforum::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

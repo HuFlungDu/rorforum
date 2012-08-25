@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Rortesting::Application.load_tasks
+Rorforum::Application.load_tasks
