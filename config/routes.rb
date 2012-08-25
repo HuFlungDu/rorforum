@@ -1,4 +1,16 @@
 Rorforum::Application.routes.draw do
+  root to: "forum#index"
+
+  match "/viewforum", to: "forum#viewforum"
+
+  match "/viewthread", to: "forum#viewthread"
+
+  match "/register", to: "forum#register"
+
+  match "/login", to: "forum#login"
+
+  match "/memberlist", to: "forum#memberlist"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +60,7 @@ Rorforum::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  # root :to => 'forum#index'
 
   # See how all your routes lay out with "rake routes"
 
