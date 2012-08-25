@@ -4,9 +4,14 @@
       <%= link_to yield(:boardname), root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Members",    memberlist_path %></li>
-          <li><%= link_to "Register",    register_path %></li>
-          <li><%= link_to "Sign in", login_path %></li>
+          <% if signed_in? %>
+            <li><%= link_to "Members",    memberlist_path %></li>
+            <li><%= link_to "Logout", logout_path, method: "delete" %></li>
+          <% else %>
+            <li><%= link_to "Register",    register_path %></li>
+            <li><%= link_to "Login", login_path %></li>
+          <% end %>
+          
         </ul>
       </nav>
     </div>

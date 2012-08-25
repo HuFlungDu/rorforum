@@ -1,5 +1,6 @@
 Rorforum::Application.routes.draw do
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   root to: "forum#index"
 
@@ -9,7 +10,9 @@ Rorforum::Application.routes.draw do
 
   match "/register", to: "users#new"
 
-  match "/login", to: "forum#login"
+  match "/login", to: "sessions#new"
+
+  match '/logout', to: 'sessions#destroy', via: :delete
 
   match "/memberlist", to: "forum#memberlist"
 
