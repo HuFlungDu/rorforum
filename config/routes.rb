@@ -1,11 +1,13 @@
 Rorforum::Application.routes.draw do
+  resources :users
+
   root to: "forum#index"
 
   match "/viewforum", to: "forum#viewforum"
 
   match "/viewthread", to: "forum#viewthread"
 
-  match "/register", to: "forum#register"
+  match "/register", to: "users#new"
 
   match "/login", to: "forum#login"
 
