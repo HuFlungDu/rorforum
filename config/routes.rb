@@ -1,12 +1,11 @@
 Rorforum::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :forums
 
-  root to: "forum#index"
+  root to: "forums#index"
 
-  match "/viewforum", to: "forum#viewforum"
-
-  match "/viewthread", to: "forum#viewthread"
+  match "/admin", to: "forums#admin"
 
   match "/register", to: "users#new"
 

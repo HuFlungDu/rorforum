@@ -31,6 +31,10 @@ module SessionsHelper
   def signed_in?
     !current_user.nil?
   end
+
+  def power_level?(level)
+    current_user.power_level >= level
+  end
   
   def redirect_back_or(default)
     redirect_to(session[:return_to] || default)

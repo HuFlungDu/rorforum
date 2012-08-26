@@ -1,0 +1,27 @@
+<%= provide(:section, "Register") %>
+<h1>Register a new user</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@forum) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :parent %>
+      <%= f.collection_select :parent, Forum.all, :id, :name%>
+
+      <%= f.label :required_power_level_to_view %>
+      <%= f.text_field :required_power_level_to_view %>
+
+      <%= f.label :required_power_level_to_post %>
+      <%= f.text_field :required_power_level_to_post %>
+
+      <%= f.label :forum_nav_id %>
+      <%= f.text_field :forum_nav_id %>      
+
+      <%= f.submit "Make new forum", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

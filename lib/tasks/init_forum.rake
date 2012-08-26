@@ -1,6 +1,6 @@
 namespace :db do
   desc "Initiate forum"
-  task :init_forum, [:forumname, :username, :email, :password] => [:environment] do |t, args|
+  task :init_forum, [:forumname, :forumdesc, :username, :email, :password] => [:environment] do |t, args|
     print "Warning: This will destroy your entire forum. Continue? [y/N] "
     cont = STDIN.gets.chomp
     if cont.downcase == "y"
@@ -13,9 +13,10 @@ namespace :db do
       admin.save
       forum = Forum.create!(name: args[:forumname],
                         parent: nil,
-                        required_powerlevel_to_view: 0, 
-                        required_pwerlevel_to_post: 3, 
-                        forum_nav_id: 0)
+                        required_power_level_to_view: 0, 
+                        required_power_level_to_post: 3, 
+                        forum_nav_id: 0,
+                        description: args[:forumdesc])
 
     end
   end

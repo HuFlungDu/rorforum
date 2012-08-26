@@ -4,13 +4,17 @@
       <%= link_to yield(:boardname), root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
+
           <% if signed_in? %>
             <li><%= link_to "Profile", current_user %></li>
             <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
             <li><%= link_to "Members",    memberlist_path %></li>
             <li><%= link_to "Logout", logout_path, method: "delete" %></li>
+            <% if power_level?(3) %>
+              <li><%= link_to "Admin panel", admin_path %></li>
+            <% end %>
           <% else %>
-            <li><%= link_to "Register",    register_path %></li>
+            <li><%= link_to "Register", register_path %></li>
             <li><%= link_to "Login", login_path %></li>
           <% end %>
           

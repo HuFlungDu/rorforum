@@ -3,12 +3,15 @@ class UsersController < ApplicationController
   before_filter :correct_user,   only: [:edit, :update]
   def show
     @user = User.find(params[:id])
+    @query = @user
   end
   def new
   	@user = User.new
+    @query = @user
   end
   def create
     @user = User.new(params[:user])
+    @query = @user
     if @user.save
       sign_in @user, false
       flash[:success] = "User Registered!"
@@ -20,10 +23,12 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @query = @user
   end
 
   def update
     @user = User.find(params[:id])
+    @query = @user
     if @user.update_attributes(params[:user])
       flash[:success] = "Profile updated"
 	  sign_in @user, session[:persistence]
@@ -35,6 +40,7 @@ class UsersController < ApplicationController
 
   def index
   	@users = User.paginate(page: params[:page])
+    @query = @user
   end
 
   def signed_in_user
@@ -44,6 +50,7 @@ class UsersController < ApplicationController
 
   def correct_user
     @user = User.find(params[:id])
+    @query = @user
     redirect_to(root_path) unless current_user?(@user)
   end
 end
