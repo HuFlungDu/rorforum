@@ -5,6 +5,8 @@
       <nav>
         <ul class="nav pull-right">
           <% if signed_in? %>
+            <li><%= link_to "Profile", current_user %></li>
+            <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
             <li><%= link_to "Members",    memberlist_path %></li>
             <li><%= link_to "Logout", logout_path, method: "delete" %></li>
           <% else %>

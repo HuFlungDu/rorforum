@@ -14,7 +14,7 @@ Rorforum::Application.routes.draw do
 
   match '/logout', to: 'sessions#destroy', via: :delete
 
-  match "/memberlist", to: "forum#memberlist"
+  match "/memberlist", to: "users#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

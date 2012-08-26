@@ -11,6 +11,9 @@
 	  <%= f.label :password %>
 	  <%= f.password_field :password %>
 
+	  <%= check_box_tag :stay_logged %>
+	  <%= label_tag(:stay_logged, "Keep me logged in") %>
+
 	  <%= f.submit "Login", class: "btn btn-large btn-primary" %>
 
 	<% end %>
