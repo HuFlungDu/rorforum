@@ -4,16 +4,4 @@ class ForumController < ApplicationController
 
   def viewforum
   end
-
-  def viewthread
-  end
-
-  def register
-  end
-
-  def login
-  end
-
-  def memberlist
-  end
 end

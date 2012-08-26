@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= provide(:boardname, "Test board") %>
+  <%= provide(:boardname, @foruminfo.name) %>
   <title><%= yield(:boardname) %> - <%= yield(:section) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
