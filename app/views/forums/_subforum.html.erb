@@ -1,0 +1,6 @@
+<% if power_level?(forum.required_power_level_to_view) %>
+	<div class="subforum">
+		<div class="subforum-name"><h1><%= link_to forum.name, forum_path(forum.forum_nav_id) %></h1></div>
+		<div class="subforum-description"><%= forum.description %></div>
+	</div>
+<% end %>

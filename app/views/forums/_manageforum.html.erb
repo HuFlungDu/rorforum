@@ -1,0 +1,8 @@
+<li>
+	<%= forum.name%> 
+	| nav_id <%= forum.forum_nav_id%>
+	| id <%= forum.id%>
+	| <%= link_to "delete", forum, method: :delete,
+                                  data: { confirm: "Are you sure you want to delete this forum?" } %>
+	| <%= link_to "edit", edit_forum_path(forum) %>
+</li>

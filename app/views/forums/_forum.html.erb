@@ -1,0 +1,11 @@
+<div class="subforums">
+	<%= render :partial => "subforum", :collection => Forum.where(:parent => forum.id), :as => :forum  %>
+</div>
+<div class="controls-bar">
+	<%= link_to forum.name, topic_path(forum.forum_nav_id) %>
+</div>
+<%= will_paginate topics%>
+<div class="topics">
+	<%= render @topics %>
+</div>
+<%= will_paginate topics%>

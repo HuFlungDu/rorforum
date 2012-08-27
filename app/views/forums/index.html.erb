@@ -1,1 +1,5 @@
 <%= provide(:section, "Forum index") %>
+
+<div class="forum">
+	<%= render :partial => "forum", :locals => {:forum => @forum, :topics => @topics} %>
+</div>

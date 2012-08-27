@@ -40,7 +40,7 @@ header
     font-size:1.8em;
     margin:0px;
   }
-  div.logo
+  .logo
   {
     a:link {color:#43486D;text-decoration:none;}
     a:visited {color:#43486D;text-decoration:none;}
@@ -93,4 +93,62 @@ input[type="text"], input[type="password"], textarea, select, .uneditable-input
 .overflow-hidden
 {
   overflow:hidden;
+}
+
+.subforum
+{
+  margin:10px;
+  border: solid 1px #999;
+  padding: 10px;
+  .subforum-name
+  {
+    h1
+    {
+      text-align:left;
+      text-align: left;
+      font-size:1.8em;
+      margin:0px;
+      text-align:left;
+      a:link 
+      {
+        color:#43486D;
+        text-decoration:none;
+      }
+      a:visited 
+      {
+        color:#43486D;
+        text-decoration:none;
+      }
+      
+    }
+  }
+}
+
+.forum
+{
+  margin:10px;
+  border: solid 1px #999;
+  padding: 10px;
+  .forum-name
+  {
+    h1
+    {
+      text-align:left;
+      text-align: left;
+      font-size:1.8em;
+      margin:0px;
+      text-align:left;
+      a:link 
+      {
+        color:#43486D;
+        text-decoration:none;
+      }
+      a:visited 
+      {
+        color:#43486D;
+        text-decoration:none;
+      }
+      
+    }
+  }
 }

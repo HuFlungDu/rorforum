@@ -1,8 +1,7 @@
 <% provide(:section, "Edit profile") %> 
 <h1>Update your profile</h1>
 
-<div class="row">
-  <div class="span6 offset3">
+<div class="generic-form">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
@@ -17,5 +16,4 @@
 
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
-  </div>
 </div>

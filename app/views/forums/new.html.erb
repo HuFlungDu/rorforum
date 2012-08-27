@@ -7,6 +7,9 @@
 
       <%= f.label :name %>
       <%= f.text_field :name %>
+      
+      <%= f.label :description %>
+      <%= f.text_area :description, :size => "15x15" %>
 
       <%= f.label :parent %>
       <%= f.collection_select :parent, Forum.all, :id, :name%>

@@ -4,6 +4,8 @@ Rorforum::Application.routes.draw do
   resources :forums
 
   root to: "forums#index"
+  
+  match "/manage_forums", to: "forums#manage"
 
   match "/admin", to: "forums#admin"
 

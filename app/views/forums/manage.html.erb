@@ -1,0 +1,6 @@
+<% provide(:section, 'Manage Forums') %>
+<h1>Manage forums</h1>
+
+<ul class="manage-forums">
+  	<%= render :partial => "manageforum", :collection => @forums, :as => :forum  %>
+</ul>

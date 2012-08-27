@@ -1,0 +1,6 @@
+<%= provide(:section, @forum.name) %>
+
+<div class="forum">
+	<div class="forum-name"><h1><%= link_to @forum.name, forum_path(@forum.forum_nav_id) %></h1></div>
+	<%= render :partial => "forum", :locals => {:forum => @forum, :topics => @topics} %>
+</div>

@@ -33,7 +33,11 @@ module SessionsHelper
   end
 
   def power_level?(level)
-    current_user.power_level >= level
+    if current_user
+      current_user.power_level >= level
+    else
+      0 >= level
+    end
   end
   
   def redirect_back_or(default)
