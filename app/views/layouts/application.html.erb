@@ -11,7 +11,10 @@
        More info: h5bp.com/i/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Rorforum</title>
+  <%= provide(:boardname, @foruminfo.name) %>
+  <%= provide(:boarddesc, @foruminfo.description) %>
+  <title><%= yield(:boardname) %> - <%= yield(:section) %></title>
+  <%= csrf_meta_tags %>
   <meta name="description" content="">
 
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
@@ -34,10 +37,6 @@
        that you need. -->
   <!--<#%= javascript_tag "Modernizr.load();" %>-->
   
-  <%= provide(:boardname, @foruminfo.name) %>
-  <%= provide(:boarddesc, @foruminfo.description) %>
-  <title><%= yield(:boardname) %> - <%= yield(:section) %></title>
-  <%= csrf_meta_tags %>
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
