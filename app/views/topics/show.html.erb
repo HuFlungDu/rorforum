@@ -1,0 +1,12 @@
+<div class="topic-toolbar">
+	<div class="topic-data"><%= link_to @topic.forum.name, forum_path(@topic.forum.forum_nav_id) %> - <%= @topic.name %> </div>
+	<% if power_level?(@forum.required_power_level_to_post) and signed_in? %>
+		<div class="topic-commands"><%= link_to "Reply", reply_path(:topic => @topic)%> </div>
+	<% end %>
+</div>
+<%= will_paginate @posts%>
+<!--I'm sorry for using a table, I just couldn't do it...-->
+<table class="posts">
+	<%= render @posts %>
+</table>
+<%= will_paginate @posts%>

@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :username, :password, :password_confirmation, :displayusername
   has_secure_password
   has_many :posts
+  has_many :topics
   before_save :save_displayusername
   before_save { |user| user.username = username.downcase }
   before_save :create_remember_token

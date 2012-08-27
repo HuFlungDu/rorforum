@@ -2,7 +2,9 @@
 	<%= render :partial => "subforum", :collection => Forum.where(:parent => forum.id), :as => :forum  %>
 </div>
 <div class="controls-bar">
-	<%= link_to forum.name, topic_path(forum.forum_nav_id) %>
+	<% if power_level?(forum.required_power_level_to_post) and signed_in? %>
+		<%= link_to "Create Topic", maketopic_path(:forum => forum.forum_nav_id)%>
+	<% end %>
 </div>
 <%= will_paginate topics%>
 <div class="topics">

@@ -1,7 +1,21 @@
 Rorforum::Application.routes.draw do
+  get "posts/show"
+
+  get "posts/new"
+
+  get "posts/edit"
+
+  get "topics/show"
+
+  get "topics/new"
+
+  get "topics/edit"
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :forums
+  resources :topics
+  resources :posts
 
   root to: "forums#index"
   
@@ -10,6 +24,10 @@ Rorforum::Application.routes.draw do
   match "/admin", to: "forums#admin"
 
   match "/register", to: "users#new"
+  
+  match "/maketopic", to: "topics#new"
+  
+  match "/reply", to: "posts#new"
 
   match "/login", to: "sessions#new"
 

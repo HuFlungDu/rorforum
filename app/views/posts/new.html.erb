@@ -1,0 +1,14 @@
+<%= provide(:section, "New reply") %>
+<h1>Create new topic</h1>
+
+<div class="generic-form">
+	
+    <%= form_for(@post, :url => { :action => :create, :topic => @topic }) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label "Post text" %>
+      <%= f.text_area :data, :size => "15x15" %>
+
+      <%= f.submit "Submit Post", class: "btn btn-large btn-primary" %>
+    <% end %>
+</div>
