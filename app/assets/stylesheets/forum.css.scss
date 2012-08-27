@@ -2,137 +2,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "bootstrap";
-
-/* mixins, variables, etc. */
-
-$grayMediumLight: #eaeaea;
-
-@mixin box_sizing {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
-}
-
-
-/* universal */
-
-html {
-  overflow-y: scroll;
-}
-
-body {
-  padding-top: 60px;
-}
-
-section {
-  overflow: auto;
-}
-
-textarea {
-  resize: vertical;
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
+body
+{
+  font-size: 10px;
+  margin:10px;
+  background-color:#EEE;
+  border: solid 1px #999;
+  padding: 10px;
+  h1
+  {
+    text-align: center;
   }
 }
 
-/* typography */
+nav
+{
+  ul
+  {
+    float:right;
+    font-size:1.5em;
+    font-weight:bold;
+    a:link {color:#43486D;text-decoration:none;}
+    a:visited {color:#43486D;text-decoration:none;}
+    margin: 10px;
+  }
+}
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $grayLight;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
-
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-  &:hover {
-    color: white;
-    text-decoration: none;
+header
+{
+  h1
+  {
+    text-align: left;
+    font-size:1.8em;
+    margin:0px;
+  }
+  div.logo
+  {
+    a:link {color:#43486D;text-decoration:none;}
+    a:visited {color:#43486D;text-decoration:none;}
   }
 }
 
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover { 
-      color: $grayDarker;
-    }
-  }  
-  small { 
-    float: left; 
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
+.container
+{
+  overflow:hidden;
 }
 
-
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
+.alert
+{
+  font-size:1.2em;
+  border: solid 1px;
+  text-align:center;
 }
 
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
-  width: 100%;
-  padding: 10px;
-  height: auto;
-  margin-bottom: 15px;
-  @include box_sizing;
-}
 
 #error_explanation {
   color: #f00;
@@ -142,22 +68,29 @@ input, textarea, select, .uneditable-input {
   }
 }
 
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
- }
+.signin-form, .register-form
+{
+  width:50%;
+  margin:0 auto;
+}
 
- /* users index */
 
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-top: 1px solid $grayLighter;
-    &:last-child {
-      border-bottom: 1px solid $grayLighter;
-    }
-  }
+
+input[type="text"], input[type="password"], textarea, select, .uneditable-input
+{
+    border: 1px solid #bbb;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    display:block;
+}
+.check
+{
+  display:block;
+  height: auto;
+} 
+
+.overflow-hidden
+{
+  overflow:hidden;
 }

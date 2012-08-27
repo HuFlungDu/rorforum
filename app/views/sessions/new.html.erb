@@ -2,8 +2,7 @@
 <h1>Login</h1>
 
 
-<div class="row">
-  <div class="span6 offset3">
+<div class="signin-form">
     <%= form_for(:session, url: sessions_path) do |f| %>
       <%= f.label :username %>
       <%= f.text_field :username %>
@@ -11,13 +10,14 @@
 	  <%= f.label :password %>
 	  <%= f.password_field :password %>
 
-	  <%= check_box_tag :stay_logged %>
-	  <%= label_tag(:stay_logged, "Keep me logged in") %>
+	  <div class="check">
+	  	<%= check_box_tag :stay_logged %>
+	  	<%= label_tag(:stay_logged, "Keep me logged in") %>
+	  </div>
 
 	  <%= f.submit "Login", class: "btn btn-large btn-primary" %>
 
 	<% end %>
 
 	<p>New user? <%= link_to "Sign up now!", register_path %></p>
-  </div>
 </div>
