@@ -1,5 +1,5 @@
 <tr class="post">
-	<td class="user-box"><%= link_to post.user.username, user_path(post.user) %> </td>
+	<td class="user-box"><%= link_to post.user.displayusername, user_path(post.user) %> </td>
 	<!--Remember to add bbcode for these-->
-	<td class="post-box"><%= post.data %> </td>
+	<td class="post-box"><%= tanslate_to_bbcode post.data %> </td>
 </tr>
