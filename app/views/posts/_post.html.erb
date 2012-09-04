@@ -1,5 +1,16 @@
 <tr class="post">
-	<td class="user-box"><%= link_to post.user.displayusername, user_path(post.user) %> </td>
-	<!--Remember to add bbcode for these-->
-	<td class="post-box"><%= tanslate_to_bbcode post.data %> </td>
+	<td class="user-box">
+		<%-# Title? -%>
+		<%-# Avatar? -%>
+		<div class="username"><%= link_to post.user.displayusername, user_path(post.user) %></div>
+		<%-# Posts? -%>
+		<%-# Since? -%>
+		<%-# Location? -%>
+		
+	</td>
+	<td class="post-box">
+		<%-# Header? -%>
+		<%= sanitize_and_bb post.data %> 
+		<%-# Footer? -%>
+	</td>
 </tr>

@@ -1,0 +1,6 @@
+<div class="manage-bbcodetags">
+	<%= form_tag admin_manage_bbcode_path do%>
+  		<%= render :partial => "managetag", :collection => @tags, :as => :tag%>
+  		<%= submit_tag "Update BBCode Tags", class: "btn btn-large btn-primary" %>
+    <% end %>
+</div>

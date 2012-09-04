@@ -17,7 +17,14 @@ namespace :db do
                         required_power_level_to_post: 3, 
                         forum_nav_id: 0,
                         description: args[:forumdesc])
-
+      [:bold,:italics,:underline,:strikeout,:delete,:insert,
+       :code,:size,:color,:orderedlist,:unorderedlist,:listitem,
+       :definelist,:defineterm,:definition,:quote,:link,:image,:video,:email].each do |name|
+        bbcode = BbCodeTags.new(name: name, enable_symbol: name)
+        bbcode.enabled = true
+        bbcode.custom = false
+        bbcode.save
+      end
     end
   end
 end
