@@ -12,6 +12,7 @@ gem 'bcrypt-ruby'
 gem 'faker'
 gem 'will_paginate'
 gem 'bb-ruby'
+gem 'sanitize'
 
 # Gems used only for assets and not required
 # in production environments by default.
