@@ -1,15 +1,5 @@
 Rorforum::Application.routes.draw do
-  get "posts/show"
-
-  get "posts/new"
-
-  get "posts/edit"
-
-  get "topics/show"
-
-  get "topics/new"
-
-  get "topics/edit"
+  get "bb_code_tags/manage"
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
@@ -19,7 +9,11 @@ Rorforum::Application.routes.draw do
 
   root to: "forums#index"
   
-  match "/manage_forums", to: "forums#manage"
+  match "/admin/manage_bbcode", to: "bb_code_tags#manage", via: :get
+  
+  match "/admin/manage_bbcode", to: "bb_code_tags#update", via: :post
+  
+  match "/admin/manage_forums", to: "forums#manage"
 
   match "/admin", to: "forums#admin"
 

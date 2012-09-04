@@ -34,7 +34,7 @@ class ForumsController < ApplicationController
   def destroy
     Forum.find(params[:id]).destroy
     flash[:success] = "Forum removed."
-    redirect_to manage_forums_path
+    redirect_to admin_manage_forums_path
   end
 
   def signed_in_user
