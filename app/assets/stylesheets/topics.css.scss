@@ -10,9 +10,9 @@
   {
     h1
     {
-      text-align:left;
+      float:left;
       font-weight:bold;
-      font-size:1.2em;
+      font-size:1.5em;
       margin:0px;
       text-align:left;
       a:link 
@@ -30,7 +30,7 @@
   }
   .topic-starter
   {
-    text-align:right;
+    float:right;
     font-size:1.2em;
     margin:0px;
     a:link 
@@ -44,6 +44,13 @@
       text-decoration:none;
     }
   }
+  .topic-date
+  {
+    float:right;
+    font-size:1.2em;
+    margin:0px;
+    clear:right;
+  }
   
 }
 
@@ -56,9 +63,30 @@
   .topic-data
   {
     float:left;
+    .topic-forum
+    {
+      a:link 
+      {
+        color:#43486D;
+        text-decoration:none;
+      }
+      a:visited 
+      {
+        color:#43486D;
+        text-decoration:none;
+      }
+    }
   }
   .topic-commands
   {
     float:right;
+    .reply
+    {
+      a:visited 
+      {
+        color:#00E;
+        text-decoration:none;
+      }
+    }
   }
 }

@@ -16,6 +16,11 @@
   .user-box
   {
     padding:20px;
+    .username
+    {
+      a:link {color:#43486D;text-decoration:none;}
+      a:visited {color:#43486D;text-decoration:none;}
+    }
   }
   .post-box
   {
