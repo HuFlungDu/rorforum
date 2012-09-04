@@ -1,3 +1,64 @@
 // Place all the styles related to the Topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.topic
+{
+  margin:10px;
+  border: solid 1px #999;
+  padding: 10px;
+  .topic-name
+  {
+    h1
+    {
+      text-align:left;
+      font-weight:bold;
+      font-size:1.2em;
+      margin:0px;
+      text-align:left;
+      a:link 
+      {
+        color:#43486D;
+        text-decoration:none;
+      }
+      a:visited 
+      {
+        color:#43486D;
+        text-decoration:none;
+      }
+      
+    }
+  }
+  .topic-starter
+  {
+    text-align:right;
+    font-size:1.2em;
+    margin:0px;
+    a:link 
+    {
+      color:#43486D;
+      text-decoration:none;
+    }
+    a:visited 
+    {
+      color:#43486D;
+      text-decoration:none;
+    }
+  }
+  
+}
+
+.topic-toolbar
+{
+  overflow:auto;
+  margin:10px;
+  border: solid 1px #999;
+  padding: 10px;
+  .topic-data
+  {
+    float:left;
+  }
+  .topic-commands
+  {
+    float:right;
+  }
+}
