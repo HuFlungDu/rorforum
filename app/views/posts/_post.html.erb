@@ -1,16 +1,29 @@
-<tr class="post">
-	<td class="user-box">
-		<%-# Title? -%>
-		<%-# Avatar? -%>
-		<div class="username"><%= link_to post.user.displayusername, user_path(post.user) %></div>
-		<%-# Posts? -%>
-		<%-# Since? -%>
-		<%-# Location? -%>
-		
-	</td>
-	<td class="post-box">
-		<%-# Header? -%>
-		<%= sanitize_and_bb post.data %> 
-		<%-# Footer? -%>
-	</td>
-</tr>
+<div class="post">
+	<div class="top-bar">
+		<div class="date">Posted on <%= post.created_at.strftime("%Y-%m-%d %H:%M") %></div>
+		<div class="controls">
+			<div class="link"><%= link_to "Link", post_path(post)%></div>
+			<div class="quote"><%= link_to "Quote", reply_path(:quoted => post)%></div>
+			<% if power_level?(1) or current_user?(post.user) %>
+				<div class="edit"><%= link_to "Edit", edit_post_path(post)%></div>
+			<% end %>
+		</div>
+	</div>
+	<div class="data">
+		<div class="user-box">
+			<%-# Title? -%>
+			<%-# Avatar? -%>
+			<div class="username"><%= link_to post.user.displayusername, user_path(post.user) %></div>
+			<%-# Posts? -%>
+			<%-# Since? -%>
+			<%-# Location? -%>
+			
+		</div>
+		<div class="post-box">
+			<%-# Header? -%>
+			<%= sanitize_and_bb post.data %> 
+			<%-# Footer? -%>
+		</div>
+	</div>
+	<div class="clear_both"></div>
+</div>

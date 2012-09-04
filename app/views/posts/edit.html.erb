@@ -1,2 +1,14 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<%= provide(:section, "Edit post") %>
+<h1>Edit post</h1>
+
+<div class="generic-form">
+	
+    <%= form_for(@post) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= f.label "Post text" %>
+      <%= f.text_area :data, :size => "15x15" %>
+
+      <%= f.submit "Submit Post", class: "btn btn-large btn-primary" %>
+    <% end %>
+</div>

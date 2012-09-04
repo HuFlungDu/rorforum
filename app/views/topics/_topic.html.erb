@@ -1,6 +1,6 @@
 <div class="topic">
-	<div class="topic-name"><h1><%= link_to topic.name, topic_path(topic) %></h1></div>
-	<div class="topic-starter">Started by: <%= link_to topic.user.displayusername, user_path(topic.user) %></div>
-	<div class="topic-date">Created at: <%= topic.created_at.strftime("%Y-%m-%d %H:%M") %></div>
+	<div class="name"><%= link_to topic.name, topic_path(topic) %></div>
+	<div class="starter">Started by: <%= link_to topic.user.displayusername, user_path(topic.user) %></div>
+	<div class="date">Created at: <%= topic.created_at.strftime("%Y-%m-%d %H:%M") %></div>
 	<div class="clear_both"></div>
 </div>

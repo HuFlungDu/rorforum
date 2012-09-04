@@ -1,4 +1,5 @@
 class BbCodeTagsController < ApplicationController
+  before_filter :admin_user
   def manage
     @tags = @query = BbCodeTags.all
   end
@@ -21,5 +22,9 @@ class BbCodeTagsController < ApplicationController
   end
 
   def create
+  end
+  
+  def admin_user
+    redirect_to root_path, notice: "This action is only available to administrators" unless power_level?(3)
   end
 end

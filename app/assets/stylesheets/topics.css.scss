@@ -6,29 +6,25 @@
   margin:10px;
   border: solid 1px #999;
   padding: 10px;
-  .topic-name
+  .name
   {
-    h1
+    float:left;
+    font-weight:bold;
+    font-size:1.5em;
+    margin:0px;
+    text-align:left;
+    a:link 
     {
-      float:left;
-      font-weight:bold;
-      font-size:1.5em;
-      margin:0px;
-      text-align:left;
-      a:link 
-      {
-        color:#43486D;
-        text-decoration:none;
-      }
-      a:visited 
-      {
-        color:#43486D;
-        text-decoration:none;
-      }
-      
+      color:#43486D;
+      text-decoration:none;
+    }
+    a:visited 
+    {
+      color:#43486D;
+      text-decoration:none;
     }
   }
-  .topic-starter
+  .starter
   {
     float:right;
     font-size:1.2em;
@@ -44,7 +40,7 @@
       text-decoration:none;
     }
   }
-  .topic-date
+  .date
   {
     float:right;
     font-size:1.2em;
