@@ -45,20 +45,14 @@
     {
       overflow:hidden;
       text-align:right;
-      .link
+      .control
       {
         float: right;
         margin-left:5px;
-      }
-      .quote
-      {
-        float: right;
-        margin-left:5px;
-      }
-      .edit
-      {
-        float: right;
-        margin-left:5px;
+        a:visited 
+        {
+          color:#00E;
+        }
       }
     }
     

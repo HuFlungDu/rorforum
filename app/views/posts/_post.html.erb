@@ -2,10 +2,10 @@
 	<div class="top-bar">
 		<div class="date">Posted on <%= post.created_at.strftime("%Y-%m-%d %H:%M") %></div>
 		<div class="controls">
-			<div class="link"><%= link_to "Link", post_path(post)%></div>
-			<div class="quote"><%= link_to "Quote", reply_path(:quoted => post)%></div>
+			<div class="control link"><%= link_to "Link", post_path(post)%></div>
+			<div class="control quote"><%= link_to "Quote", reply_path(:topic => post.topic,:quoted => post)%></div>
 			<% if power_level?(1) or current_user?(post.user) %>
-				<div class="edit"><%= link_to "Edit", edit_post_path(post)%></div>
+				<div class="control edit"><%= link_to "Edit", edit_post_path(post)%></div>
 			<% end %>
 		</div>
 	</div>
