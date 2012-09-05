@@ -36,6 +36,11 @@ class PostsController < ApplicationController
     end
   end
   
+  def show
+    @post = Post.find(params[:id])
+    redirect_to topic_path(@post.topic, :anchor => "p#{params[:id]}")
+  end
+  
   def has_topic
     if !params[:topic]
       redirect_to root_path
